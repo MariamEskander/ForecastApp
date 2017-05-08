@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="alldays"
+            type="perfectneeds.android.forecastapp.model.AllDays" />
+    </data>
+
+<RelativeLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="@{alldays.dayName}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/dayname" />
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@{alldays.dayIcon}"
+        android:layout_below="@+id/dayname"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/dayicon" />
+
+    <TextView
+        android:text="@{alldays.dayDescription}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dayicon"
+        android:layout_marginLeft="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/daydesc" />
+
+    <TextView
+        android:text="@{alldays.dayDate}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/dayname"
+        android:layout_toEndOf="@+id/dayname"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/daydate" />
+
+
+    <TextView
+        android:text="High"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/daydate"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:id="@+id/textViewhigh" />
+
+    <TextView
+        android:text="Low"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewhigh"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="40dp"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:id="@+id/textViewlow" />
+
+    <TextView
+        android:text="@{alldays.dayFHTemp}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textViewhigh"
+        android:id="@+id/fhTemp" />
+
+    <TextView
+        android:text="@{alldays.dayCHTemp}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/fhTemp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textViewhigh"
+        android:id="@+id/chTemp" />
+
+    <TextView
+        android:text="@{alldays.dayFLTemp}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textViewlow"
+        android:id="@+id/flTemp" />
+
+    <TextView
+        android:text="@{alldays.dayCLTemp}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/fhTemp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textViewlow"
+        android:id="@+id/clTemp" />
+
+</RelativeLayout>
+    </layout>
